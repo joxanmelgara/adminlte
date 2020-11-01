@@ -11,28 +11,42 @@
                 <input type="hidden" name="agregar" value="1">
                 <div class="card-body">
                   <div class="form-group">
+                   <!--  INSERT INTO `productos` (`nombre`, `partNo`, `cantidad`, `precioV`, `precioC`, `categoria_id`, `destino`, `media_id`, `fecha`) -->
                     <label for="exampleInputPassword1">Nombre producto</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Igrese el nombre" required>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Codigo</label>
-                    <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Igrese el codigo" required>
+                    <input type="text" class="form-control" id="partNo" name="partNo" placeholder="Ingrese el codigo" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Cantidad</label>
-                    <input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="Igrese la cantidad" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Precio compra</label>
-                    <input type="text" class="form-control" id="precioC" name="precioC" placeholder="Igrese el precio de compra" required>
+                    <input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Precio venta</label>
-                    <input type="text" class="form-control" id="precioV" name="precioV" placeholder="Igrese el precio de venta" required>
+                    <input type="text" class="form-control" id="precioV" name="precioV" placeholder="Ingrese el precio de venta" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Precio compra</label>
+                    <input type="text" class="form-control" id="precioC" name="precioC" placeholder="Ingrese el precio de compra" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Categoria id</label>
+                    <input type="text" class="form-control" id="categoria_id" name="categoria_id" placeholder="Ingrese el precio de compra" required>
+                  </div>
+                   <div class="form-group">
+                    <label for="exampleInputPassword1">Destino</label>
+                    <input type="text" class="form-control" id="destino" name="destino" placeholder="Ingrese el precio de compra" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Media</label>
+                    <input type="text" class="form-control" id="media_id" name="media_id" placeholder="Ingrese el precio de compra" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Fecha</label>
-                    <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Igrese la fecha" required>
+                    <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Ingrese la fecha" required>
                   </div>
                 </div>
                 <div class="card-footer">

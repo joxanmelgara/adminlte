@@ -11,5 +11,6 @@
 <script src="<?= PLANTILLA ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= PLANTILLA ?>dist/js/adminlte.min.js"></script>
 <script src="<?= PLANTILLA ?>dist/js/funciones.js"></script>
+<script src="<?= PLANTILLA ?>dist/js/sweetalert2.js"></script>
 </body>
 </html>

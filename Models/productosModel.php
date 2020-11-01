@@ -12,35 +12,45 @@ class productosModel extends Model
 		return $fila;
 	}
 
-	public function agregarProductos($nombre,$codigo,$cantidad,$precioC,$precioV,$fecha)
+	public function agregarProductos($nombre,$partNo,$cantidad,$precioV,$precioC,$categoria_id,$destino,$media_id,$fecha)
 	{
-	  $this->_db->prepare('INSERT INTO productos(nombre,codigo,cantidad,precioC,precioV,fecha) VALUES(:nombre, :codigo, :cantidad, :precioC, :precioV, :fecha)')->execute(
+		
+	  $this->_db->prepare('INSERT INTO productos(nombre,partNo,cantidad,precioV,precioC,categoria_id,destino,media_id,fecha) VALUES(:nombre, :partNo, :cantidad, :precioV, :precioC, :categoria_id,:destino,:media_id,:fecha)')->execute(
 	    	array(
 	    		'nombre'=>$nombre,
-	    		'codigo'=>$codigo,
+	    		'partNo'=>$partNo,
 	    		'cantidad'=>$cantidad,
-	    		'precioC'=>$precioC,
 	    		'precioV'=>$precioV,
+	    		'precioC'=>$precioC,
+	    		'categoria_id'=>$categoria_id,
+	    		'destino'=>$destino,
+	    		'media_id'=>$media_id,
 	    		'fecha'=>$fecha
 	    	));
 	}
 		
- 	public function actualizarProductos($id,$nombre,$codigo,$cantidad,$precioC,$precioV,$fecha)
+ 	public function actualizarProductos($id,$nombre,$partNo,$cantidad,$precioV,$precioC,$categoria_id,$destino,$media_id,$fecha)
 	{
 		$this->_db->prepare('UPDATE productos SET 
 			nombre = :nombre,
-			codigo = :codigo,
+			partNo = :partNo,
 			cantidad = :cantidad,
-			precioC = :precioC,
 			precioV = :precioV,
+			precioC = :precioC,
+			categoria_id = :categoria_id,
+			destino = :destino,
+			media_id = :media_id,
 			fecha = :fecha where id= :id')->execute(array(
 				'id'=>$id,
 	    		'nombre'=>$nombre,
-	    		'codigo'=>$codigo,
+	    		'partNo'=>$partNo,
 	    		'cantidad'=>$cantidad,
-	    		'precioC'=>$precioC,
 	    		'precioV'=>$precioV,
-	    		'fecha'=>$fecha,
+	    		'precioC'=>$precioC,
+	    		'categoria_id'=>$categoria_id,
+	    		'destino'=>$destino,
+	    		'media_id'=>$media_id,
+	    		'fecha'=>$fecha
 	    ));
 	}
 

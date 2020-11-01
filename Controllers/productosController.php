@@ -20,10 +20,13 @@ class productosController extends Controller
         $tabla.='<tr>
             <td class="text-center">'.$f['id'].'</td>
             <td class="text-center">'.$f['nombre'].'</td>
-            <td class="text-center">'.$f['codigo'].'</td>
+            <td class="text-center">'.$f['partNo'].'</td>
             <td class="text-center">'.$f['cantidad'].'</td>
-            <td class="text-center">'.$f['precioC'].'</td>
             <td class="text-center">'.$f['precioV'].'</td>
+            <td class="text-center">'.$f['precioC'].'</td>
+            <td class="text-center">'.$f['categoria_id'].'</td>
+            <td class="text-center">'.$f['media_id'].'</td>
+            <td class="text-center">'.$f['destino'].'</td>
             <td class="text-center">'.$f['fecha'].'</td>
             <td class="text-center">
                 <div class="btn-group">
@@ -54,12 +57,15 @@ class productosController extends Controller
     public function edit(){
             $id=$this->getTexto('id');
             $nombre=$this->getTexto('nombre');
-            $codigo=$this->getTexto('codigo');
+            $partNo=$this->getTexto('partNo');
             $cantidad=$this->getTexto('cantidad');
-            $precioC=$this->getTexto('precioC');
             $precioV=$this->getTexto('precioV');
+            $precioC=$this->getTexto('precioC');
+            $categoria_id=$this->getTexto('categoria_id');
+            $destino=$this->getTexto('destino');
+            $media_id=$this->getTexto('media_id');
             $fecha=$this->getTexto('fecha');
-            $this->_productos->actualizarProductos($id,$nombre,$codigo,$cantidad,$precioC,$precioV,$fecha);
+            $this->_productos->actualizarProductos($id,$nombre,$partNo,$cantidad,$precioV,$precioC,$categoria_id,$destino,$media_id,$fecha);
         echo $this->generarTabla();
     }
 
@@ -69,13 +75,16 @@ class productosController extends Controller
 
             if($this->getTexto('agregar')=='1') {
             $nombre=$this->getTexto('nombre');
-            $codigo=$this->getTexto('codigo');
+            $partNo=$this->getTexto('partNo');
             $cantidad=$this->getTexto('cantidad');
-            $precioC=$this->getTexto('precioC');
             $precioV=$this->getTexto('precioV');
+            $precioC=$this->getTexto('precioC');
+            $categoria_id=$this->getTexto('categoria_id');
+            $destino=$this->getTexto('destino');
+            $media_id=$this->getTexto('media_id');
             $fecha=$this->getTexto('fecha');
-            $this->_productos->agregarProductos($nombre,$codigo,$cantidad,$precioC,$precioV,$fecha);
-            $this->redireccionar('productos/index');
+            $this->_productos->agregarProductos($nombre,$partNo,$cantidad,$precioV,$precioC,$categoria_id,$destino,$media_id,$fecha);
+            $this->redireccionar('productos');
         }
 
         $this->_view->renderizar('agregarp');

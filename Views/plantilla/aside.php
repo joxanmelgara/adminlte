@@ -39,13 +39,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= BASE_URL?>categorias/index" class="nav-link">
+                <a href="<?= BASE_URL?>categorias" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ver Datos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= BASE_URL?>categorias/agregar" class="nav-link">
+                <a href="<?= BASE_URL?>categorias/agregarc" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Agregar Datos</p>
                 </a>
@@ -62,7 +62,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= BASE_URL?>productos/index" class="nav-link">
+                <a href="<?= BASE_URL?>productos" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ver productos</p>
                 </a>
@@ -85,7 +85,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= BASE_URL?>usuarios/verus" class="nav-link">
+                <a href="<?= BASE_URL?>usuarios" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ver usuarios</p>
                 </a>
@@ -108,7 +108,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?=BASE_URL?>ventas/vents" class="nav-link">
+                <a href="<?=BASE_URL?>ventas" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Ver ventas</p>
                 </a>
@@ -121,6 +121,53 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-house-user"></i>
+              <p>
+                Grupo usuarios
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?=BASE_URL?>grupo" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver grupos</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=BASE_URL?>grupos/agregar" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Agregar grupo</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+         <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-image"></i>
+              <p>
+               Multimedia
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?=BASE_URL?>grupo" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver images</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=BASE_URL?>grupos/agregar" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Agregar imagen</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
         </ul>
       </nav>
     </div>

@@ -6,6 +6,7 @@
   <title>Admin | Starter</title>
   <link rel="stylesheet" href="<?= PLANTILLA ?>plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="<?= PLANTILLA ?>dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?= PLANTILLA ?>dist/js/sweetAlert2/sweetalert2.min.css">
   <link href="<?= PLANTILLA?>dist/img/AdminLTELogo.png" rel="shortcut icon">
 </head>
 <body class="hold-transition sidebar-mini">

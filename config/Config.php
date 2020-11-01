@@ -1,6 +1,6 @@
 <?php
 
-define('BASE_URL','http://localhost/adminlte/');
+define('BASE_URL','http://localhost/hxz/adminlte/');
 define('DEFAULT_CONTROLLER','index');
 define('PLANTILLA',BASE_URL.'Views/plantilla/');
 
