@@ -24,7 +24,6 @@ class productosController extends Controller
             <td class="text-center">'.$f['cantidad'].'</td>
             <td class="text-center">'.$f['precioV'].'</td>
             <td class="text-center">'.$f['precioC'].'</td>
-            <td class="text-center">'.$f['categoria_id'].'</td>
             <td class="text-center">'.$f['media_id'].'</td>
             <td class="text-center">'.$f['destino'].'</td>
             <td class="text-center">'.$f['fecha'].'</td>
@@ -47,6 +46,7 @@ class productosController extends Controller
 
     public function index()
     {   
+        Accesos::acceso('registrador');
         $tabla=$this->generarTabla();
         $this->_view->tabla=$tabla;
         $this->_view->renderizar('index');
@@ -55,6 +55,7 @@ class productosController extends Controller
 
 
     public function edit(){
+            Accesos::acceso('admin');
             $id=$this->getTexto('id');
             $nombre=$this->getTexto('nombre');
             $partNo=$this->getTexto('partNo');
