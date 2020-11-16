@@ -8,56 +8,61 @@ class productosModel extends Model
     }
 
 	public function obtenerProductos($campo=null,$valor=null){
-		$fila=$this->_db->query("SELECT * FROM productos")->fetchAll();
+		$fila=$this->_db->query("SELECT * FROM tbproductos")->fetchAll();
 		return $fila;
 	}
 
-	public function agregarProductos($nombre,$partNo,$cantidad,$precioV,$precioC,$categoria_id,$destino,$media_id,$fecha)
+	public function agregarProductos($nombrep, $codigo, $precioVt, $precioCp, $destino, $fecha, $tbCategorias_idtbCategorias, $tbMultimedia_idtbMultimedia)
 	{
 		
-	  $this->_db->prepare('INSERT INTO productos(nombre,partNo,cantidad,precioV,precioC,categoria_id,destino,media_id,fecha) VALUES(:nombre, :partNo, :cantidad, :precioV, :precioC, :categoria_id,:destino,:media_id,:fecha)')->execute(
+	  $this->_db->prepare('INSERT INTO tbproductos(nombrep, codigo, precioVt, precioCp, destino, fecha,tbCategorias_idtbCategorias,tbMultimedia_idtbMultimedia) VALUES(:nombrep, :codigo, :precioVt, :precioCp, :destino, :fecha,:tbCategorias_idtbCategorias,:tbMultimedia_idtbMultimedia)')->execute(
 	    	array(
-	    		'nombre'=>$nombre,
-	    		'partNo'=>$partNo,
-	    		'cantidad'=>$cantidad,
-	    		'precioV'=>$precioV,
-	    		'precioC'=>$precioC,
-	    		'categoria_id'=>$categoria_id,
+	    		'nombrep'=>$nombrep,
+	    		'codigo'=>$codigo,
+	    		'precioVt'=>$precioVt,
+	    		'precioCp'=>$precioCp,
 	    		'destino'=>$destino,
-	    		'media_id'=>$media_id,
-	    		'fecha'=>$fecha
+	    		'fecha'=>$fecha,
+	    		'tbCategorias_idtbCategorias'=>$tbCategorias_idtbCategorias,
+	    		'tbMultimedia_idtbMultimedia'=>$tbMultimedia_idtbMultimedia
 	    	));
 	}
-		
- 	public function actualizarProductos($id,$nombre,$partNo,$cantidad,$precioV,$precioC,$categoria_id,$destino,$media_id,$fecha)
+	
+
+ 	public function actualizarProductos($idtbProductos,$nombrep, $codigo, $precioVt, $precioCp, $destino, $fecha)
 	{
-		$this->_db->prepare('UPDATE productos SET 
-			nombre = :nombre,
-			partNo = :partNo,
-			cantidad = :cantidad,
-			precioV = :precioV,
-			precioC = :precioC,
-			categoria_id = :categoria_id,
-			destino = :destino,
-			media_id = :media_id,
-			fecha = :fecha where id= :id')->execute(array(
-				'id'=>$id,
-	    		'nombre'=>$nombre,
-	    		'partNo'=>$partNo,
-	    		'cantidad'=>$cantidad,
-	    		'precioV'=>$precioV,
-	    		'precioC'=>$precioC,
-	    		'categoria_id'=>$categoria_id,
+		$this->_db->prepare('UPDATE tbproductos SET 
+			nombrep=:nombrep,
+			codigo=:codigo, 
+			precioVt=:precioVt,
+			precioCp=:precioCp,
+			destino=:destino, 
+			fecha=:fecha
+			where idtbProductos= :idtbProductos')->execute(array(
+				'idtbProductos'=>$idtbProductos,
+	    		'nombrep'=>$nombrep,
+	    		'codigo'=>$codigo,
+	    		'precioVt'=>$precioVt,
+	    		'precioCp'=>$precioCp,
 	    		'destino'=>$destino,
-	    		'media_id'=>$media_id,
 	    		'fecha'=>$fecha
 	    ));
 	}
 
-	public function eliminar($id){
-        $this->_db->prepare('DELETE FROM productos WHERE id =:id')->execute(
+	public function getCat(){
+        $fila = $this->_db->query("SELECT * FROM tbcategorias")->fetchAll();
+        return $fila;
+        }
+
+    public function getImg(){
+        $fila = $this->_db->query("SELECT * FROM tbmultimedia")->fetchAll();
+        return $fila;
+        }
+
+	public function eliminar($idtbProductos){
+        $this->_db->prepare('DELETE FROM tbproductos WHERE idtbProductos =:idtbProductos')->execute(
         	array(
-        		'id'=>$id,
+        		'idtbProductos'=>$idtbProductos,
         	));
     }
 }

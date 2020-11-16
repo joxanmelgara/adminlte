@@ -2,59 +2,67 @@
  <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-9">
             <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">Formulario de registro</h3>
               </div>
+              
               <form action="" method="post">
                 <input type="hidden" name="agregar" value="1">
-                <div class="card-body">
-                  <div class="form-group">
-                   <!--  INSERT INTO `productos` (`nombre`, `partNo`, `cantidad`, `precioV`, `precioC`, `categoria_id`, `destino`, `media_id`, `fecha`) -->
-                    <label for="exampleInputPassword1">Nombre producto</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre" required>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-4">
+                        <label for="exampleInputPassword1">Nombre producto</label>
+                        <input type="text" class="form-control" id="nombrep" name="nombrep" placeholder="Ingrese el nombre" required>
+                      </div>
+                      <div class="col-4">
+                        <label for="exampleInputPassword1">Codigo</label>
+                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Ingrese el codigo" required>
+                      </div>
+                      <div class="col-4">
+                        <label for="exampleInputPassword1">Precio venta</label>
+                        <input type="text" class="form-control" id="precioVt" name="precioVt" placeholder="Ingrese el precio de venta" required>
+                      </div>
+                      <div class="col-4"><br>
+                        <label for="exampleInputPassword1">Precio compra</label>
+                        <input type="text" class="form-control" id="precioCp" name="precioCp" placeholder="Ingrese el precio de compra" required>
+                      </div>
+                       <div class="col-4"><br>
+                        <label for="exampleInputPassword1">Destino</label>
+                        <input type="text" class="form-control" id="destino" name="destino" placeholder="Ingrese el destino" required>
+                      </div>
+                      <div class="col-4"><br>
+                        <label for="exampleInputPassword1">Fecha</label>
+                        <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Ingrese la fecha" required>
+                      </div>
+                      <div class="col-4"><br>
+                        <label for="example">Seleccione una Categoria</label>
+                        <span class="form-group">
+                         <select name="categoria" id="categoria" class="form-control">
+                          <?=$this->categoria?>
+                        </select>
+                        </span>
+                      </div>
+                      <div class="col-4"><br>
+                        <label for="example">Seleccione una img</label>
+                        <span class="form-group">
+                         <select name="categoria" id="categoria" class="form-control">
+                          <?=$this->multimedia?>
+                        </select>
+                        </span>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="card-body">
+                      <button type="submit" class="btn btn-primary">
+                        <span>
+                            <i class="fas fa-arrow-right"></i> Enviar</button>
+                        </span>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Codigo</label>
-                    <input type="text" class="form-control" id="partNo" name="partNo" placeholder="Ingrese el codigo" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Cantidad</label>
-                    <input type="text" class="form-control" id="cantidad" name="cantidad" placeholder="Ingrese la cantidad" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Precio venta</label>
-                    <input type="text" class="form-control" id="precioV" name="precioV" placeholder="Ingrese el precio de venta" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Precio compra</label>
-                    <input type="text" class="form-control" id="precioC" name="precioC" placeholder="Ingrese el precio de compra" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Categoria id</label>
-                    <input type="text" class="form-control" id="categoria_id" name="categoria_id" placeholder="Ingrese el precio de compra" required>
-                  </div>
-                   <div class="form-group">
-                    <label for="exampleInputPassword1">Destino</label>
-                    <input type="text" class="form-control" id="destino" name="destino" placeholder="Ingrese el precio de compra" required>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Media</label>
-                    <input type="text" class="form-control" id="media_id" name="media_id" placeholder="Ingrese el precio de compra" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Fecha</label>
-                    <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Ingrese la fecha" required>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
               </form>
             </div>
           </div>
         </div>
-      </div>
     </section>

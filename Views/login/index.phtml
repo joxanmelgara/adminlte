@@ -1,18 +1,17 @@
- <?php if (isset($this->mensaje)) echo $this->mensaje;?>
-<div class="hold-transition login-page" style="margin-top: -80px">  
+<div class="hold-transition login-page">  
 <section class="content-header">
 <div class="login-box">
+ <?php if (isset($this->mensaje)) echo $this->mensaje;?>
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
       <a href="#" class="h1"><b>Almacen</b>LTE</a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Iniciar sesion</p>
-
+      <p class="login-box-msg text-info">Iniciar sesion</p>
       <form action="#" method="post">
          <input type="hidden" name="ingresar" value="1">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="usuario" name="usuario" id="usuario">
+          <input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario" autofocus="">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -36,5 +35,7 @@
     </div>
   </div>
 </div>
+
 </section>
+</div>
 </div>

@@ -12,14 +12,14 @@
                 <input type="hidden" name="editar" value="1">
                 <div class="card-body">
 
-                  <input type="hidden" class="form-control" id="id" name="id">
+                  <input type="hidden" class="form-control" id="idtbProductos" name="idtbProductos">
 
                   <div class="row form-group">
                     <div class="col-sm-2">
                       <label class="control-label" style="position:relative; top:7px;">Nombre:</label>
                     </div>
                     <div class="col-sm-10">
-                     <input type="text" class="form-control" id="nombre" name="nombre">
+                     <input type="text" class="form-control" id="nombrep" name="nombrep">
                     </div>
                   </div>
 
@@ -28,25 +28,15 @@
                       <label class="control-label" style="position:relative; top:7px;">Codigo:</label>
                     </div>
                     <div class="col-sm-10">
-                     <input type="text" class="form-control" id="partNo" name="partNo">
+                     <input type="text" class="form-control" id="codigo" name="codigo">
                     </div>
                   </div>
-
-                 <div class="row form-group">
-                    <div class="col-sm-2">
-                      <label class="control-label" style="position:relative; top:7px;">Cantidad:</label>
-                    </div>
-                    <div class="col-sm-10">
-                     <input type="text" class="form-control" id="cantidad" name="cantidad">
-                    </div>
-                  </div>
-
                   <div class="row form-group">
                     <div class="col-sm-2">
                       <label class="control-label" style="position:relative; top:7px;">Precio venta:</label>
                     </div>
                     <div class="col-sm-10">
-                     <input type="text" class="form-control" id="precioV" name="precioV">
+                     <input type="text" class="form-control" id="precioVt" name="precioVt">
                     </div>
                   </div>
 
@@ -55,16 +45,7 @@
                       <label class="control-label" style="position:relative; top:7px;">Precio compra:</label>
                     </div>
                     <div class="col-sm-10">
-                     <input type="text" class="form-control" id="precioC" name="precioC">
-                    </div>
-                  </div>
-                  
-                    <div class="row form-group">
-                    <div class="col-sm-2">
-                      <label class="control-label" style="position:relative; top:7px;">Categoria id:</label>
-                    </div>
-                    <div class="col-sm-10">
-                     <input type="text" class="form-control" id="categoria_id" name="categoria_id">
+                     <input type="text" class="form-control" id="precioCp" name="precioCp">
                     </div>
                   </div>
 
@@ -76,15 +57,6 @@
                      <input type="text" class="form-control" id="destino" name="destino">
                     </div>
                   </div>
-
-                   <div class="row form-group">
-                    <div class="col-sm-2">
-                      <label class="control-label" style="position:relative; top:7px;">Media:</label>
-                    </div>
-                    <div class="col-sm-10">
-                     <input type="text" class="form-control" id="media_id" name="media_id">
-                    </div>
-                  </div>
                   
                   <div class="row form-group">
                     <div class="col-sm-2">
@@ -94,6 +66,26 @@
                      <input type="date" class="form-control" id="fecha" name="fecha">
                     </div>
                   </div>
+
+                   <!--  <div class="row form-group">
+                    <div class="col-sm-2">
+                      <label class="control-label" style="position:relative; top:7px;">Categoria id:</label>
+                    </div>
+                    <div class="col-sm-10">
+                     <input type="text" class="form-control" id="tbCategorias_idtbCategorias" name="tbCategorias_idtbCategorias">
+                    </div>
+                  </div> -->
+
+
+                   <!-- <div class="row form-group">
+                    <div class="col-sm-2">
+                      <label class="control-label" style="position:relative; top:7px;">Media:</label>
+                    </div>
+                    <div class="col-sm-10">
+                     <input type="text" class="form-control" id="tbMultimedia_idtbMultimedia" name="tbMultimedia_idtbMultimedia">
+                    </div>
+                  </div> -->
+                  
                 </div>
             </div>
             <div class="modal-footer justify-content-between table">
@@ -104,10 +96,30 @@
           <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
-      </div><br>
+      </div>
+      <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Productos</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Productos</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
     <div class="content">
       <div class="container-fluid">
-     <a href="<?= BASE_URL?>productos/agregarp" class="nav-link"><i class="far fa-circle nav-icon"> Agregar Producto</i></a>
+    	<a href="<?= BASE_URL ?>productos/agregarp" class="btn btn-secondary btn-icon-split">
+            <span class="icon text-white-50">
+                <i class="fas fa-plus"></i>
+            </span>
+            <span class="text">Agregar Nuevo</span>
+        </a>
         <div class="row mr-7">
           <div class="col-lg-12"><br>
             <div class="card card-primary">
@@ -115,25 +127,36 @@
                 <h3 class="card-title">Lista de productos registrados</h3>
               </div>
               <div class="card-body">
-                <table class="table table-bordered" id="tablaProductos">
+                <table id="e" class="table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th class="text-center">#</th>
                       <th class="text-center">Nombre</th>
                       <th class="text-center">Codigo</th>
-                      <th class="text-center">Cantidad</th>
-                      <th class="text-center">PrecioV</th>
-                      <th class="text-center">PrecioC</th>
-                      <th class="text-center">categoria_id</th>
-                      <th class="text-center">Media id</th>
+                      <th class="text-center">Precio venta</th>
+                      <th class="text-center">Precio compra</th>
                       <th class="text-center">Destino</th>
                       <th class="text-center">Fecha</th>
+                      <!--  -->
                       <th class="text-center">Accion</th> 
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="busquedatabla">
                       <?=$this->tabla ?>
                   </tbody>
+                  <tfoot>
+                    <tr>
+                      <th class="text-center">#</th>
+                      <th class="text-center">Nombre</th>
+                      <th class="text-center">Codigo</th>
+                      <th class="text-center">Precio venta</th>
+                      <th class="text-center">Precio compra</th>
+                      <th class="text-center">Destino</th>
+                      <th class="text-center">Fecha</th>
+                      <!--  -->
+                      <th class="text-center">Accion</th> 
+                    </tr>
+                  </tfoot>
                 </table>
               </div>
             </div>
@@ -141,14 +164,4 @@
         </div>
       </div>
     </div>
-
-
-    
-
-
-
-
-
-
-
 

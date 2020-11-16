@@ -22,7 +22,7 @@ class Accesos{
 
 	public  static function acceso($rol)
 	{
-		if (Accesos::getDatos('validado'))
+		if (Accesos::getDatos('validados'))
 		{
 			if (Accesos::nivel( Accesos::getDatos('rol'))>= Accesos::nivel($rol)  )
 			{
