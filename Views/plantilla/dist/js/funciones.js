@@ -1,9 +1,28 @@
+ $(document).ready(function(){
+ 	$("#contrasenia").complexify({},function(valid,complexify){
+ 		console.log(valid,complexify);
+ 		$(".progress-bar").css('width',complexify+'%');
+ 		if (valid) {
+ 			// statement
+ 			$("#btnAgregar").prop('disable',false);
+ 			$(".progress-bar").addClass('bg-success').removeClass('bg-danger');
+ 			$("#btnAgregar").attr('estado',true);
+ 		}
+ 		else {
+ 			$("#btnAgregar").prop('disable',true);
+ 			$(".progress-bar").addClass('bg-danger').removeClass('bg-success');
+ 			$("#btnAgregar").attr('estado',false);
+ 		}
+ 	})
+ });
+
   $(function () {
     $("#e").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv","print", "colvis"]
     }).buttons().container().appendTo('#e_wrapper .col-md-6:eq(0)');
   });
+  
 /*-----------------------------------Productos------------------------------*/
 	// obtener datos productos
 
@@ -261,88 +280,6 @@ $(document).ready(function(){
 	})
 });
 /*-----------------------------------Fin usuarios------------------------------*/
-
-
-/*-----------------------------------Grupos----------------------------------*/
-
-	// obtener datos grupo 
-	
-$(document).ready(function(){
-	$(".botonEditargrp").click(function (){
-		var datos= JSON.parse($(this).attr('data-p'));
-		$("#idtbGrupoUs").val(datos['idtbGrupoUs']);
-		$("#nombreGr").val(datos['nombreGr']);
-		$("#nivelGr").val(datos['nivelGr']);
-		$("#estadoGr").val(datos['estadoGr']);
-	})
-
-	// eliminar grupo
-
-	$("#e tbody").on('click','.botonEliminargrp', function(){
-
-				var  idtbGrupoUs = JSON.parse($(this).attr('data-d'));
-				Swal.fire({
-				  title: '¿Usted desea eliminar este dato?',
-				  showDenyButton: true,
-				  confirmButtonText: `Si`,
-				  denyButtonText: `No`,
-				}).then((result) => {
-				  /* Read more about isConfirmed, isDenied below */
-				  if (result.isConfirmed) {
-				    $.ajax({
-				     url:'grupo/eliminar',
-				     type:'post',
-				     data:{'idtbGrupoUs':idtbGrupoUs},
-
-				     success: function(respuesta){
-						Swal.fire('Eliminado con exito','','success');
-
-				       $("#e tbody").html(respuesta)
-				     },
-
-				     error: function(){
-				       console.error("Error fatal en el sistema");
-				     },
-				   })
-				  }
-				})
-			})
-
-	// actualizar grupos
-
-	$("#formEditgrp").submit(function(e){
-		e.preventDefault();
-		var idtbGrupoUs = $("#idtbGrupoUs").val();
-		var nombreGr = $("#nombreGr").val();
-		var nivelGr = $("#nivelGr").val();
-		var estadoGr = $("#estadoGr").val();
-
-		$.ajax({
-			url:'grupo/edit',
-			type:'post',
-
-			data:{'idtbGrupoUs':idtbGrupoUs,'nombreGr':nombreGr,'nivelGr':nivelGr,'estadoGr':estadoGr},
-
-			success: function(respuesta){
-
-				Swal.fire({
-					type: "success",
-					title: "Dato Actualizado",
-					text: "¡Éxito!"
-				})
-
-				$("#e tbody").html(respuesta);
-				$("#modalEditargrp").modal('hide');
-			},
-
-			error: function(){
-				console.error("Error fatal en el sistema");
-			}
-		})
-
-	})
-});
-/*-----------------------------------Fin grupo------------------------------*/
 
 /*-----------------------------------Media----------------------------------*/
 

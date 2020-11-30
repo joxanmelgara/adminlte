@@ -47,12 +47,12 @@ class productosController extends Controller
             <td class="text-center">'.$f['fecha'].'</td>
             <td class="text-center">
                 <div class="btn-group">
-                   <button class="btn btn-primary botonEditar" data-toggle="modal" data-target="#modalEditar" data-p=\'' .$datos. '\'>
+                   <button class="btn btn-primary botonEditar" data-toggle="modal" data-target="#modalEditar"  data-p=\'' .$datos. '\'>
                     <span class="fas fa-edit"></span>
                    </button>
                   
                    <button class="btn btn-dark botonEliminar" data-d=\'' .$f['idtbProductos']. '\'>
-                    <span class="fas fa-trash"></span>
+                    <span class="fas fa-trash-alt"></span>
                    </button>
                 </div>
             </td>

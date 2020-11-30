@@ -7,7 +7,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="index3.html" class="brand-link"> 
       <img src="<?= PLANTILLA?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light text-center">AlmacenLTE 1.0</span>
+      <span class="brand-text font-weight-light text-center">Almacen</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">
@@ -102,7 +102,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
+    <!--       <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-shopping-basket text-primary"></i>
               <p>
@@ -124,8 +124,8 @@
                 </a>
               </li>
             </ul>
-          </li>
-          <li class="nav-item">
+          </li> -->
+<!--           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-house-user text-primary"></i>
               <p>
@@ -147,8 +147,8 @@
                 </a>
               </li>
             </ul>
-          </li>
-         <li class="nav-item">
+          </li> -->
+         <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-image text-primary"></i>
               <p>
@@ -170,7 +170,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
           
         </ul>
       </nav>

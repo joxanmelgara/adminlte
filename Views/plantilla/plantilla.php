@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin | Starter</title>
   <link rel="stylesheet" href="<?= PLANTILLA ?>plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="<?= PLANTILLA ?>plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="<?= PLANTILLA ?>dist/css/adminlte.min.css">
   <link rel="stylesheet" href="<?= PLANTILLA ?>dist/js/sweetAlert2/sweetalert2.min.css">
   <link rel="stylesheet" href="<?= PLANTILLA ?>plugins/fontawesome-free/css/all.min.css">

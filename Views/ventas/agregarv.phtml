@@ -1,0 +1,174 @@
+<br><br>
+ <section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card card-primary">
+        <div class="card-header">
+        <strong>
+          <span class="fas fa-th"></span>
+          <span>Procesar Venta</span>
+        </strong>
+    </div>
+      <div class="panel-body"style="margin-left: auto">
+       <div class="col-md-12">
+        <form method="post" action="" class="clearfix">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3">
+              </div>
+              <div class="col-md-2" style="text-align: center;">
+                <img class="img-avatar img-circle" id="product_image" src="" style="height:6em; display:none", alt="">
+              </div>  
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="input-group">
+                  <span class="input-group-addon" style="cursor:pointer" id="check-partNo">
+                    <i class="fas fa-align-left"></i> 
+                  </span>
+                  <input type="text" class="form-control" id="partNo" name="partNo" placeholder="COD/Part No">
+                </div>
+                <div id="lst_partNo" style="cursor: pointer;" class="list-group"></div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="input-group">
+                  <span class="input-group-addon" style="cursor:pointer" id="check-product-name">
+                    <i class="fas fa-align-left"></i>
+                  </span>
+                  <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Nombre/T&iacute;tulo" autofocus>
+                </div>
+                <div id="lst_product_name" style="cursor: pointer;" class="list-group"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="">categor&iacute;a</label>
+                <div class="input-group" style="margin-bottom: 1ex">
+                  <span class="input-group-addon">
+                    <i class="fas fa-align-left"></i>
+                  </span>
+                  <span class="form-control" id="category"></span>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label for="">ubicaci&oacute;n</label>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="fas fa-th-list"></i>
+                  </span>
+                  <span class="form-control" id="location"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3">
+                <label for="">fecha</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fas fa-calendar-plus"></i></span>
+                  <input type="text" class="form-control" name="date" id="date" data-date data-date-format="yyyy-mm-dd" placeholder="yyyy-mm-dd">
+                </div>
+              </div>
+              <div class="col-md-1">
+                <!-- column separator -->
+              </div>
+              <div class="col-md-4">
+                <label for="destination">destino/cliente</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fas fa-home"></i></span>
+                  <input type="text" class="form-control" id="destination" name="destination" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3">
+                <label for="">disponible</label>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    #&nbsp;
+                  </span>
+                  <span class="form-control" id="stock">0</span>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <!-- column separator -->
+              </div>
+              <div class="col-md-3">
+                <label for="">cantidad</label>
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </span>
+                  <input type="number" class="form-control" id="quantity" name="quantity" placeholder="0">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3">
+                <label for="">precio compra</label> 
+                <div class="input-group">
+                  <span class="input-group-addon" id="buy_price_addon"><i class="fas fa-money-bill"></i></span>
+                  <span class="form-control" id="buy_price">0.00</span>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <!-- column separator -->
+              </div>
+              <div class="col-md-3">
+                <label for="">precio venta</label> 
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fas fa-money-bill"></i></span>
+                  <input type="text" class="form-control" id="sale_price" name="sale_price" placeholder="0.00">
+               </div>
+              </div>
+              <div class="col-md-3">
+                <label for="">Total Venta</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fas fa-money-bill"></i></span>
+                  <input type="text" class="form-control" id="total_sale" name="total_sale" placeholder="0.00">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="row" style="margin-top: 2.5em;">
+              <div class="col-md-3">
+                <div class="input-group">
+                  <button type="submit" name="add_sale" class="btn-sm btn-primary">Procesar Venta</button>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <!-- column separator -->
+              </div>
+              <div class="col-md-1">
+                <div class="input-group">
+                  <button class="btn-sm btn-warning" id="refresh">Limpiar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </form>
+       </div>
+      </div>
+    </div>
+   </div>
+    </div>
+    </section>

@@ -22,7 +22,11 @@ class loginController extends Controller
     			$this->redireccionar('index');
 
     		} else{
-    			$this->_view->mensaje='<div class=" text-center alert alert-danger alert-dismissible fade show" role="alert"><strong>Usuario y/o Clave Incorrectos</strong>.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+    			$this->_view->mensaje='<div class="alert alert-warning alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <strong><i class="icon fas fa-exclamation-triangle"></i>Usuario y/o Clave Incorrectos.</strong>
+                  
+                </div>';
     		}
     	}
     	$this->_view->renderizar('index');

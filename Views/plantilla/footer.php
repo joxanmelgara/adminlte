@@ -11,7 +11,9 @@
 </footer>
 </div>
 <?php } ?>
+
 <script src="<?= PLANTILLA ?>plugins/jquery/jquery.min.js"></script>
+<script src="<?= PLANTILLA ?>plugins/bootstrap/bootstrap.min.js"></script>
 <script src="<?= PLANTILLA ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= PLANTILLA ?>dist/js/adminlte.min.js"></script>
 <script src="<?= PLANTILLA ?>dist/js/funciones.js"></script>
@@ -23,7 +25,11 @@
 <script src="<?= PLANTILLA ?>plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="<?= PLANTILLA ?>plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="<?= PLANTILLA ?>plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="<?= PLANTILLA ?>plugins/popper/popper.js"></script>
+<script src="<?= PLANTILLA ?>plugins/popper/popper.min.js"></script>
 <script src="<?= PLANTILLA ?>dist/js/demo.js"></script>
+<script src="<?= PLANTILLA ?>js/jquery.complexify.banlist.js"></script>
+<script src="<?= PLANTILLA ?>js/jquery.complexify.js"></script>
 <!-- <script src="<?= PLANTILLA ?>js/script.js"></script> -->
 </body>
 </html>
