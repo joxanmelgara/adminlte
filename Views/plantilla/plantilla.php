@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="<?= PLANTILLA ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= PLANTILLA ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= PLANTILLA ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= PLANTILLA ?>css/chosen.min.css">
+
   <!-- <link rel="stylesheet" href="<?= PLANTILLA ?>css/style.css">
   <link rel="stylesheet" href="<?= PLANTILLA ?>css/demo.css"> -->
   <link href="<?= PLANTILLA?>dist/img/AdminLTELogo.png" rel="shortcut icon">

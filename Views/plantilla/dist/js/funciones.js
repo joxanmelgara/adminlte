@@ -1,20 +1,33 @@
+$(document).ready(function(){
+    $(".chosen").chosen(); 
+    $(".productosFiltrados").isotope();
+
+    $(document).on('click','.filtrar',function(){
+        let filtro = $(this).attr('data-filter');
+        
+        $(".productosFiltrados").isotope({
+            filter: filtro
+        });
+    })
+})
  $(document).ready(function(){
  	$("#contrasenia").complexify({},function(valid,complexify){
  		console.log(valid,complexify);
  		$(".progress-bar").css('width',complexify+'%');
  		if (valid) {
  			// statement
- 			$("#btnAgregar").prop('disable',false);
+ 			$("#btnAgregar").prop('disabled',false);
  			$(".progress-bar").addClass('bg-success').removeClass('bg-danger');
- 			$("#btnAgregar").attr('estado',true);
+ 			$("#btnAgregar").attr('estado',false);
  		}
  		else {
- 			$("#btnAgregar").prop('disable',true);
+ 			$("#btnAgregar").prop('disabled',true);
  			$(".progress-bar").addClass('bg-danger').removeClass('bg-success');
- 			$("#btnAgregar").attr('estado',false);
+ 			$("#btnAgregar").attr('estado',true);
  		}
  	})
  });
+
 
   $(function () {
     $("#e").DataTable({

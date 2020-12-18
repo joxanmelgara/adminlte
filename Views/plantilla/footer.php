@@ -30,6 +30,9 @@
 <script src="<?= PLANTILLA ?>dist/js/demo.js"></script>
 <script src="<?= PLANTILLA ?>js/jquery.complexify.banlist.js"></script>
 <script src="<?= PLANTILLA ?>js/jquery.complexify.js"></script>
+<script src="<?= PLANTILLA ?>js/jquery.validate.min.js"></script>
+<script src="<?= PLANTILLA ?>js/chosen.jquery.min.js"></script>
+<script src="<?= PLANTILLA ?>js/isotope.min.js"></script>
 <!-- <script src="<?= PLANTILLA ?>js/script.js"></script> -->
 </body>
 </html>
